@@ -1,0 +1,15 @@
+{
+    "name": "Blank",
+    "short_name": "Blank",
+    "start_url": "/",
+    "background_color": "#000000",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "/blank.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable any"
+        }
+    ]
+}
