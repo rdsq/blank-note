@@ -1,9 +1,8 @@
 {
     "name": "Blank",
-    "short_name": "Blank",
     "start_url": "/",
     "background_color": "#000000",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
         {
             "src": "/blank.png",
