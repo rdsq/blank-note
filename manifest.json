@@ -1,6 +1,7 @@
 {
     "name": "Blank",
     "start_url": "/",
+    "description": "Write some text, like prompts, without saving, in your browser page",
     "background_color": "#000000",
     "display": "standalone",
     "icons": [
