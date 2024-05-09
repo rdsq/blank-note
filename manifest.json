@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Blank",
+    "version": "1.0.0",
+    "description": "Write some text, like prompts, without saving, in your browser page",
+    "icons": {
+      "512": "blank.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "blank.png"
+    }
+  }
