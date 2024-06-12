@@ -10,5 +10,12 @@
             "sizes": "512x512",
             "purpose": "maskable any"
         }
-    ]
+    ],
+    "share_target": {
+        "action": "",
+        "method": "POST",
+        "params": {
+            "text": "text"
+        }
+  }
 }
