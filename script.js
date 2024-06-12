@@ -26,6 +26,20 @@ function hashChangeHandler() {
     }
 }
 
+// thanks to ChatGPT
+function isRunningInChromeExtension() {
+    return (
+        typeof chrome !== 'undefined' &&
+        typeof chrome.runtime !== 'undefined' &&
+        typeof chrome.runtime.id !== 'undefined'
+    );
+}
+
+// main part
+
+// Set min size for Chrome extension window
+if (isRunningInChromeExtension()) document.documentElement.classList.add('extension-styles');
+
 window.addEventListener('hashchange', hashChangeHandler, false);
 // I don't know why `false`, this is how it was on MDN
 
