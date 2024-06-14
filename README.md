@@ -54,8 +54,4 @@ Here is how to do it:
 3. Enable Developer Mode with the switcher on top of the page
 4. Click `Install Unpacked Extension` and choose the directory of this project you downloaded
 
-That's all. Now you can click on the extension's icon and do all that writing stuff
-
-## Project Structure
-
-This app uses two manifests. [One for PWA](./manifest-web.json), [one for Chrome Extension](./manifest.json)
+That's all. Now you can click on the extension's icon on the toolbar and do all that writing stuff
