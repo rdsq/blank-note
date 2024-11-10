@@ -43,6 +43,23 @@
 </head>
 <body>
     <div id="editor" contenteditable="true" autofocus></div>
+    <!--  URL hash -->
+    <script type="module">
+        const editorElement = document.getElementById('editor');
+        function hashChangeHandler() {
+            // if there were some arguments
+            if (location.hash !== '' && location.hash !== '#') {
+                const text = decodeURIComponent(location.hash.substring(1));
+                // clear arguments
+                location.hash = "";
+                // set text
+                editorElement.innerText = text;
+                console.log(text, editorElement)
+            }
+        }
+        window.addEventListener('hashchange', hashChangeHandler, false);
+        hashChangeHandler(); // initial call
+    </script>
     <!-- An optional script -->
     <script type="module" src="./script.js"></script>
 </body>

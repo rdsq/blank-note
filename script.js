@@ -12,20 +12,6 @@ if ('serviceWorker' in navigator) {
     console.error("Service workers are not supported.");
 }
 
-const editorElement = document.getElementById('editor');
-
-function hashChangeHandler() {
-    // if there were some arguments
-    if (location.hash !== '' && location.hash !== '#') {
-        const text = decodeURIComponent(location.hash.substring(1));
-        // clear arguments
-        location.hash = "";
-        // set text
-        editorElement.innerText = text;
-        console.log(text, editorElement)
-    }
-}
-
 // thanks to ChatGPT
 function isRunningInChromeExtension() {
     return (
@@ -39,9 +25,3 @@ function isRunningInChromeExtension() {
 
 // Set min size for Chrome extension window
 if (isRunningInChromeExtension()) document.documentElement.classList.add('extension-styles');
-
-window.addEventListener('hashchange', hashChangeHandler, false);
-// I don't know why `false`, this is how it was on MDN
-
-// also call it initially
-hashChangeHandler();
