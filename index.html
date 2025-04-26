@@ -9,13 +9,6 @@
         html {
             height: 100%;
         }
-        .extension-styles {
-            /* For browser extension windows */
-            min-width: 15em;
-            min-height: 15em;
-            /* A bit bigger font size */
-            font-size: 1.3em;
-        }
         body {
             height: 100%;
             margin: 0;
@@ -38,12 +31,11 @@
         }
     </style>
     <link rel="shortcut icon" href="/blank.svg" type="image/x-icon">
-    <link rel="manifest" href="manifest-web.json">
     <meta name="description" content="Write some text in your browser, like prompts, without saving, in your browser page">
 </head>
 <body>
     <div id="editor" contenteditable="true" autofocus></div>
-    <!--  URL hash -->
+    <!--  URL hash, which is optional -->
     <script type="module">
         const editorElement = document.getElementById('editor');
         function hashChangeHandler() {
@@ -54,13 +46,10 @@
                 location.hash = "";
                 // set text
                 editorElement.innerText = text;
-                console.log(text, editorElement)
             }
         }
         window.addEventListener('hashchange', hashChangeHandler, false);
         hashChangeHandler(); // initial call
     </script>
-    <!-- An optional script -->
-    <script type="module" src="./script.js"></script>
 </body>
 </html>
